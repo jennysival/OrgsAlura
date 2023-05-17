@@ -4,7 +4,7 @@ import br.com.alura.orgs.model.Usuario
 import org.junit.Assert.*
 import org.junit.Test
 
-class TestaUsuario {
+class UsuarioTests {
 
     @Test
     fun `deve retornar true quando o usuario for valido`(){
