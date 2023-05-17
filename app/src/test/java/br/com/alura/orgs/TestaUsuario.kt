@@ -1,7 +1,7 @@
 package br.com.alura.orgs
 
 import br.com.alura.orgs.model.Usuario
-import org.junit.Assert
+import org.junit.Assert.*
 import org.junit.Test
 
 class TestaUsuario {
@@ -19,7 +19,7 @@ class TestaUsuario {
         val usuarioEhValido = usuario.ehValido()
 
         //assert
-        Assert.assertEquals(true, usuarioEhValido)
+        assertTrue(usuarioEhValido)
     }
 
     @Test
@@ -35,7 +35,7 @@ class TestaUsuario {
         val usuarioEhInvalido = usuario.ehValido()
 
         //assert
-        Assert.assertEquals(false, usuarioEhInvalido)
+        assertFalse(usuarioEhInvalido)
     }
 
     @Test
@@ -51,6 +51,6 @@ class TestaUsuario {
         val usuarioEhInvalido = usuario.ehValido()
 
         //assert
-        Assert.assertEquals(false, usuarioEhInvalido)
+        assertFalse(usuarioEhInvalido)
     }
 }
