@@ -7,7 +7,7 @@ import org.junit.Test
 class TestaUsuario {
 
     @Test
-    fun aoInserirEmailESenhaOUsuarioDeveSerValido(){
+    fun `deve retornar true quando o usuario for valido`(){
         //arrange
         val usuario = Usuario(
             id = "01",
@@ -23,7 +23,7 @@ class TestaUsuario {
     }
 
     @Test
-    fun aoInserirEmailSemArrobaOUsuarioDeveSerInvalido(){
+    fun `deve retornar false quando o email for invalido`(){
         //arrange
         val usuario = Usuario(
             id = "02",
@@ -39,7 +39,7 @@ class TestaUsuario {
     }
 
     @Test
-    fun aoInserirSenhaMenorQueSeisOUsuarioDeveSerInvalido(){
+    fun `deve retornar false quando a senha tiver menos que 6 caracteres`(){
         //arrange
         val usuario = Usuario(
             id = "03",
