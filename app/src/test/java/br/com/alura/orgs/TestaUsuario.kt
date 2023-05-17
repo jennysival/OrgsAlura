@@ -37,4 +37,20 @@ class TestaUsuario {
         //assert
         Assert.assertEquals(false, usuarioEhInvalido)
     }
+
+    @Test
+    fun aoInserirSenhaMenorQueSeisOUsuarioDeveSerInvalido(){
+        //arrange
+        val usuario = Usuario(
+            id = "03",
+            email = "jenny@email.com",
+            senha = "1234"
+        )
+
+        //act
+        val usuarioEhInvalido = usuario.ehValido()
+
+        //assert
+        Assert.assertEquals(false, usuarioEhInvalido)
+    }
 }
