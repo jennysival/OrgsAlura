@@ -8,14 +8,33 @@ class TestaUsuario {
 
     @Test
     fun aoInserirEmailESenhaOUsuarioDeveSerValido(){
-        val usuarioValido = Usuario(
+        //arrange
+        val usuario = Usuario(
             id = "01",
             email = "jenny@email.com",
             senha = "123456789"
         )
 
-        val usuarioEhValido = usuarioValido.ehValido()
+        //act
+        val usuarioEhValido = usuario.ehValido()
 
+        //assert
         Assert.assertEquals(true, usuarioEhValido)
+    }
+
+    @Test
+    fun aoInserirEmailSemArrobaOUsuarioDeveSerInvalido(){
+        //arrange
+        val usuario = Usuario(
+            id = "02",
+            email = "jenny.com",
+            senha = "123456789"
+        )
+
+        //act
+        val usuarioEhInvalido = usuario.ehValido()
+
+        //assert
+        Assert.assertEquals(false, usuarioEhInvalido)
     }
 }
